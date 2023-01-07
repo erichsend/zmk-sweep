@@ -81,7 +81,7 @@
   &kp Y   &kp C   &kp L      &kp M             &kp K             &kp Z   &kp F      &kp U  &kp COMMA  &mt LEFT_GUI BACKSPACE
   &kp I   &kp S   &kp R      &kp T             &kp G             &kp P   &kp N      &kp E      &kp A                   &kp O
   &kp Q   &kp V   &kp W      &kp D             &kp J             &kp B   &kp H  &kp SLASH    &kp DOT                   &kp X
-                         &kp SPACE  &kp LS(LEFT_GUI)  &kp LC(LEFT_GUI)   &mo 1
+                         &kp SPACE  &kp LS(LEFT_GUI)  &kp LC(LEFT_GUI)   &to 1
             >;
         };
 
@@ -89,10 +89,10 @@
 
         sym_layer {
             bindings = <
-       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5        &kp N6       &kp N7        &kp N8        &kp N9       &trans
-  &kp IT_LESS   &kp IT_USD  &kp IT_LPAR  &kp IT_LBRC  &kp IT_LBKT    &kp IT_EQL  &kp IT_QUES  &kp IT_SQUOT  &kp IT_MINUS   &kp RETURN
- &kp IT_GREAT  &kp IT_PERC  &kp IT_RPAR  &kp IT_RBRC  &kp IT_RBKT     &kp IT_AT  &kp IT_EXCL  &kp IT_DQUOT   &kp IT_PLUS  &kp IT_FSLH
-                                               &mo 0       &trans  &kp LEFT_ALT       &trans
+       &kp N1        &kp N2        &kp N3        &kp N4       &kp N5        &kp N6       &kp N7        &kp N8        &kp N9   &bt BT_CLR
+ &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp IT_LBKT    &kp IT_EQL  &kp IT_QUES  &kp IT_SQUOT  &kp IT_MINUS   &kp RETURN
+ &kp IT_GREAT   &kp IT_PERC   &kp IT_RPAR   &kp IT_RBRC  &kp IT_RBKT     &kp IT_AT  &kp IT_EXCL  &kp IT_DQUOT   &kp IT_PLUS  &bootloader
+                                                  &to 0       &trans  &kp LEFT_ALT       &trans
             >;
         };
 
