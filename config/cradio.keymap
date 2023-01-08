@@ -47,27 +47,20 @@
         compatible = "zmk,combos";
 
         // both right thumb keys
-
-        combo_accent {
-            timeout-ms = <300>;
-            key-positions = <32 33>;
-            bindings = <&mo 5>;
-        };
-
         // internal-left & external-right thumb keys
 
-        combo_sym2 {
+        toggle_2 {
             timeout-ms = <200>;
             key-positions = <31 33>;
-            bindings = <&mo 4>;
+            bindings = <&to 2>;
         };
 
         // both left thumb keys
 
-        combo_settings {
+        toggle_3 {
             timeout-ms = <300>;
-            key-positions = <30 31>;
-            bindings = <&mo 6>;
+            key-positions = <30 33>;
+            bindings = <&to 3>;
         };
     };
 
@@ -79,7 +72,9 @@
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
     };
 
@@ -90,10 +85,10 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M             &kp K             &kp Z   &kp F      &kp U  &kp COMMA  &mt LEFT_GUI BACKSPACE
-  &kp I   &kp S   &kp R      &kp T             &kp G             &kp P   &kp N      &kp E      &kp A                   &kp O
-  &kp Q   &kp V   &kp W      &kp D             &kp J             &kp B   &kp H  &kp SLASH    &kp DOT                   &kp X
-                         &kp SPACE  &kp LS(LEFT_GUI)  &kp LC(LEFT_GUI)   &to 1
+  &kp Y   &kp C   &kp L      &kp M             &kp K            &kp Z   &kp F      &kp U  &kp COMMA  &kp BACKSPACE
+  &kp I   &kp S   &kp R      &kp T             &kp G            &kp P   &kp N      &kp E      &kp A          &kp O
+  &kp Q   &kp V   &kp W      &kp D             &kp J            &kp B   &kp H  &kp SLASH    &kp DOT          &kp X
+                         &kp SPACE  &sk LEFT_CONTROL  &sk RIGHT_SHIFT   &to 1
             >;
         };
 
@@ -115,7 +110,7 @@
    &kp ESC     &trans      &trans     &trans     &trans     &kp PG_UP  &kp HOME    &kp UP    &kp END  &kp CAPS
   &sk LALT   &sk LGUI  &sk LSHIFT  &sk LCTRL   &kp RALT     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
  &kp LC(Z)  &kp LC(X)   &kp LC(C)    &kp TAB  &kp LC(V)  &kp LC(BSPC)  &kp BSPC    &trans     &trans    &trans
-                                      &trans  &kp LCTRL     &kp ENTER     &mo 3
+                                       &to 0  &kp LCTRL     &kp ENTER     &mo 3
             >;
         };
 
@@ -126,7 +121,7 @@
    &kp F1    &kp F2      &kp F3     &kp F4    &kp F5   &kp F6   &kp F7           &kp F8  &kp F9  &kp F10
  &sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans   &trans
     &none     &none       &none      &none     &none    &none    &none            &none   &none    &none
-                                     &none     &none    &none    &none
+                                     &to 0     &none    &none    &none
             >;
         };
 
