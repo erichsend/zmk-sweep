@@ -52,7 +52,7 @@
 
         toggle_2 {
             bindings = <&to 2>;
-            key-positions = <31 33>;
+            key-positions = <32 30>;
             timeout-ms = <200>;
         };
 
