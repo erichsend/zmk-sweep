@@ -84,7 +84,7 @@
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <3 6>;
+            key-positions = <4 5>;
         };
     };
 
@@ -109,9 +109,9 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M                   &kp K   &kp Z       &kp F      &kp U  &kp PERIOD  &kp TILDE
-  &kp I   &kp S   &kp R      &kp T                   &kp G   &kp P       &kp N      &kp E       &kp A      &kp O
-  &kp Q   &kp V   &kp W      &kp D                   &kp J   &kp B       &kp H  &kp SLASH    &kp EXCL      &kp X
+  &kp Y   &kp C   &kp L      &kp M                   &kp K   &kp Z       &kp F           &kp U  &kp PERIOD  &gresc
+  &kp I   &kp S   &kp R      &kp T                   &kp G   &kp P       &kp N           &kp E       &kp A   &kp O
+  &kp Q   &kp V   &kp W      &kp D                   &kp J   &kp B       &kp H  &kp APOSTROPHE    &kp EXCL   &kp X
                          &kp SPACE  &mt LEFT_ALT BACKSPACE   &to 1  &kp RETURN
             >;
         };
