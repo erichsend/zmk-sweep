@@ -51,9 +51,9 @@
         // both left thumb keys
 
         toggle_2 {
-            timeout-ms = <200>;
-            key-positions = <31 33>;
             bindings = <&to 2>;
+            key-positions = <31 33>;
+            timeout-ms = <200>;
         };
 
         toggle_3 {
@@ -80,6 +80,11 @@
         alt {
             bindings = <&sk LEFT_ALT>;
             key-positions = <31 32>;
+        };
+
+        caps_word {
+            bindings = <&caps_word>;
+            key-positions = <3 6>;
         };
     };
 
