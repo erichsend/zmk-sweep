@@ -21,6 +21,17 @@
 
 // -----------------
 
+
+// Convenience Methods
+#define MOD_MORPH(NAME, KEY, MOD_KEY) \
+  mm_##NAME: mm_##NAME { \
+    compatible = "zmk,behavior-mod-morph"; \
+    label = #NAME; \
+    #binding-cells = <0>; \
+    bindings = <&kp KEY>, <&kp MOD_KEY>; \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
+  };
+
 &mt {
     //  flavor = "tap-preferred";
     // tapping_term_ms = <200>;
@@ -100,13 +111,13 @@
                 <&kp>,
                 <&kp>;
         };
-        smm: shift_mod_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_MOD_MORPH";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-            mods = <(MOD_LSFT)>;
-        };
+        MOD_MORPH(brackets, LEFT_BRACKET, RIGHT_BRACKET)
+        MOD_MORPH(braces, LEFT_BRACE, RIGHT_BRACE)
+        MOD_MORPH(lt_gt, LESS_THAN, GREATER_THAN)
+        MOD_MORPH(parens, LEFT_PARENTHESIS, RIGHT_PARENTHESIS)
+        MOD_MORPH(slashes, SLASH, BACKSLASH)
+        MOD_MORPH(minus_plus, MINUS, PLUS)
+        MOD_MORPH(comma_period, COMMA, PERIOD)
     };
 
     keymap {
