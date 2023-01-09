@@ -134,7 +134,7 @@
         MOD_MORPH(slashes,SLASH,BACKSLASH)
         MOD_MORPH(minus_plus,MINUS,PLUS)
         MOD_MORPH(comma_period,COMMA,PERIOD)
-        MOD_MORPH(equals_pipe,EQUALS,PIPE)
+        MOD_MORPH(equals_pipe,EQUAL,PIPE)
 };
 
     keymap {
