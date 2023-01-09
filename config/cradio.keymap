@@ -92,7 +92,7 @@
         };
 
         hyper {
-            bindings = <&sk LS(LG(LA(LC))>;
+            bindings = <&sk LS(LG(LA(LC)))>;
             key-positions = <14 15>;
         };
 
