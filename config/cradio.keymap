@@ -95,6 +95,11 @@
             bindings = <&kp RET>;
             key-positions = <33 30>;
         };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <1 2>;
+        };
     };
 
     behaviors {
@@ -171,6 +176,7 @@
         MOD_MORPH(
 
         equals_pipe,
+
         EQUALS,
 
         PIPE)
@@ -186,7 +192,7 @@
   &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z           &kp F           &kp U   &mm_comma_period  &gresc
   &kp I   &kp S   &kp R      &kp T   &kp G   &kp P           &kp N           &kp E              &kp A   &kp O
   &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B           &kp H  &kp APOSTROPHE  &mm_excl_question   &kp X
-                         &kp SPACE   &to 2   &to 1  &kp LEFT_SHIFT
+                         &kp SPACE   &sl 2   &sl 1  &kp LEFT_SHIFT
             >;
         };
 
@@ -194,10 +200,10 @@
 
         num_layer {
             bindings = <
-  &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4        &none       &none              &none   &none  &none  &none
-  &none  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1        &none       &none     &kp UNDERSCORE   &none  &none  &none
-  &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7        &none       &none              &none   &none  &none  &none
-                                            &none        &to 0       &to 4              &none
+  &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4   &none   &none           &none   &none   &none   &none
+  &none  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1   &none   &none  &kp UNDERSCORE   &none   &none   &none
+  &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7   &none   &none           &none   &none   &none   &none
+                                            &none   &to 0   &sl 4           &none
             >;
         };
 
@@ -208,7 +214,7 @@
    &kp ESC     &trans      &trans     &trans     &trans     &kp PG_UP  &kp HOME    &kp UP    &kp END  &kp CAPS
   &sk LALT   &sk LGUI  &sk LSHIFT  &sk LCTRL   &kp RALT     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
  &kp LC(Z)  &kp LC(X)   &kp LC(C)    &kp TAB  &kp LC(V)  &kp LC(BSPC)  &kp BSPC    &trans     &trans    &trans
-                                       &none      &to 0         &to 5     &none
+                                       &none      &to 0         &sl 5     &none
             >;
         };
 
@@ -219,7 +225,7 @@
       &kp F1    &kp F2      &kp F3     &kp F4    &kp F5   &kp F6   &kp F7           &kp F8  &kp F9      &kp F10
     &sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans       &trans
  &bootloader     &none       &none      &none     &none    &none    &none            &none   &none  &bootloader
-                                        &none     &to 0    &to 6    &none
+                                        &none     &to 0    &sl 6    &none
             >;
         };
 
