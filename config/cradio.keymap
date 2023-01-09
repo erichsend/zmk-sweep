@@ -71,6 +71,11 @@
             key-positions = <27 28>;
         };
 
+        shift {
+            bindings = <&sk LEFT_SHIFT>;
+            key-positions = <7 8>;
+        };
+
         ctrl {
             bindings = <&sk LCTRL>;
             key-positions = <21 22>;
@@ -92,7 +97,7 @@
         };
 
         meh {
-            bindings = <&kp LS(LA(LC(RET)))>;
+            bindings = <&kp LS(LA(LC))>;
             key-positions = <33 30>;
         };
 
@@ -147,10 +152,10 @@
 
         num_layer {
             bindings = <
-          &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4     &none     &none   &kp ASTRK       &kp CARET         &kp AMPERSAND             &none
- &kp LEFT_SHIFT  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp PIPE  &kp SEMI   &kp MINUS       &kp SLASH  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET
-          &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7     &none     &none   &kp EQUAL  &kp LEFT_BRACE                &kp LT             &none
-                                                   &kp N0     &to 0     &to 4  &kp RETURN
+          &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4          &none     &none   &mm_asterisk_percent   &mm_caret_dollar  &mm_ampersand_at         &none
+ &kp LEFT_SHIFT  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &mm_pipe_hash  &kp SEMI              &kp MINUS        &mm_slashes        &mm_parens  &mm_brackets
+          &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7          &none     &none              &kp EQUAL         &mm_braces         &mm_lt_gt         &none
+                                                   &kp N0          &to 0     &to 4             &kp RETURN
             >;
         };
 
