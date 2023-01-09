@@ -126,8 +126,9 @@
 
         QUESTION)
 
-        MOD_MORPH(brackets,
+        MOD_MORPH(
 
+        brackets,
         LEFT_BRACKET,
 
         RIGHT_BRACKET)
@@ -175,8 +176,8 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z           &kp F           &kp U  &comma_period    &gresc
-  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P           &kp N           &kp E          &kp A    &kp O
+  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z           &kp F           &kp U      &comma_period  &gresc
+  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P           &kp N           &kp E              &kp A   &kp O
   &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B           &kp H  &kp APOSTROPHE  &mm_excl_question   &kp X
                          &kp SPACE   &to 2   &to 1  &kp LEFT_SHIFT
             >;
@@ -189,7 +190,7 @@
   &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4        &none       &none           &none         &none         &none   &none
   &none  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp IT_LBKT  &kp IT_EQL  &kp UNDERSCORE  &kp IT_SQUOT  &kp IT_MINUS   &none
   &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7  &kp IT_RBKT   &kp IT_AT     &kp IT_EXCL  &kp IT_DQUOT   &kp IT_PLUS   &none
-                                            &to 0        &none       &to 4           &none
+                                            &none        &to 0       &to 4           &none
             >;
         };
 
@@ -200,7 +201,7 @@
    &kp ESC     &trans      &trans     &trans     &trans     &kp PG_UP  &kp HOME    &kp UP    &kp END  &kp CAPS
   &sk LALT   &sk LGUI  &sk LSHIFT  &sk LCTRL   &kp RALT     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
  &kp LC(Z)  &kp LC(X)   &kp LC(C)    &kp TAB  &kp LC(V)  &kp LC(BSPC)  &kp BSPC    &trans     &trans    &trans
-                                       &to 0  &kp LCTRL         &to 5     &none
+                                       &none      &to 0         &to 5     &none
             >;
         };
 
@@ -211,7 +212,7 @@
       &kp F1    &kp F2      &kp F3     &kp F4    &kp F5   &kp F6   &kp F7           &kp F8  &kp F9      &kp F10
     &sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans       &trans
  &bootloader     &none       &none      &none     &none    &none    &none            &none   &none  &bootloader
-                                        &to 0     &none    &to 6    &none
+                                        &none     &to 0    &to 6    &none
             >;
         };
 
@@ -222,7 +223,7 @@
  &kp IT_CARET  &kp IT_UNDER   &kp IT_PND   &kp IT_EUR  &kp IT_HASH   &none   &none   &none   &none   &none
   &kp IT_BKTK  &kp IT_TILDE  &kp IT_BSLH  &kp IT_PIPE   &kp IT_AND   &none   &none   &none   &none   &none
         &none         &none  &kp IT_SECT  &kp IT_CCED   &kp IT_DEG   &none   &none   &none   &none   &none
-                                                &to 0        &none   &none   &none
+                                                &none        &to 0   &none   &none
             >;
         };
 
@@ -233,7 +234,7 @@
        &none        &none        &none  &kp IT_CEGR        &none   &none   &none   &none   &none   &none
  &kp IT_AGRV  &kp IT_IGRV  &kp IT_OGRV  &kp IT_EGRV  &kp IT_EACU   &none   &none   &none   &none   &none
        &none        &none        &none  &kp IT_UGRV        &none   &none   &none   &none   &none   &none
-                                              &to 0        &none   &none   &none
+                                              &none        &to 0   &none   &none
             >;
         };
 
@@ -244,7 +245,7 @@
  &bootloader   &none   &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3   &none  &unstick   &none  &bootloader
        &none   &none   &none       &none  &bt BT_SEL 1  &bt BT_SEL 4   &none     &none   &none        &none
        &none   &none   &none       &none  &bt BT_SEL 2  &bt BT_SEL 5   &none     &none   &none        &none
-                                   &to 0         &none         &none   &none
+                                   &none         &to 0         &none   &none
             >;
         };
     };
