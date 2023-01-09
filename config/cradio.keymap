@@ -92,12 +92,12 @@
         };
 
         hyper {
-            bindings = <&sk LS(LG(LA(LC)))>;
+            bindings = <&sk LS(LA(LC(LGUI)))>;
             key-positions = <14 15>;
         };
 
         meh {
-            bindings = <&sk LS(LA(LC))>;
+            bindings = <&sk LS(LA(LC(LGUI)))>;
             key-positions = <33 30>;
         };
 
