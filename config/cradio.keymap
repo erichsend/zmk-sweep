@@ -60,45 +60,24 @@
         // internal-left & external-right thumb keys
         // both left thumb keys
 
-        toggle_3 {
-            bindings = <&to 3>;
-            key-positions = <32 31>;
-            timeout-ms = <200>;
-        };
-
         del {
             bindings = <&mt LEFT_ALT BACKSPACE>;
-            key-positions = <27 28>;
+            key-positions = <7 8>;
         };
 
         shift {
             bindings = <&sk LEFT_SHIFT>;
-            key-positions = <7 8>;
+            key-positions = <30 33>;
         };
 
         ctrl {
             bindings = <&sk LCTRL>;
-            key-positions = <21 22>;
-        };
-
-        cmd {
-            bindings = <&sk LCMD>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
         };
 
         alt {
             bindings = <&sk LEFT_ALT>;
-            key-positions = <32 33>;
-        };
-
-        hyper {
-            bindings = <&sk LS(LA(LC(LGUI)))>;
-            key-positions = <14 15>;
-        };
-
-        meh {
-            bindings = <&sk LS(LA(LC(LGUI)))>;
-            key-positions = <33 30>;
+            key-positions = <27 28>;
         };
 
         tab {
@@ -141,10 +120,10 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z                 &kp F           &kp U   &mm_comma_period  &gresc
-  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P                 &kp N           &kp E              &kp A   &kp O
-  &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B                 &kp H  &kp APOSTROPHE  &mm_excl_question   &kp X
-                         &kp SPACE   &sl 2   &sl 1  &sk LS(LA(LC(LGUI)))
+  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z    &kp F           &kp U   &mm_comma_period  &gresc
+  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P    &kp N           &kp E              &kp A   &kp O
+  &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B    &kp H  &kp APOSTROPHE  &mm_excl_question   &kp X
+                         &kp SPACE   &sl 2   &sl 1  &kp RET
             >;
         };
 
@@ -155,7 +134,7 @@
           &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4          &none     &none  &mm_asterisk_percent  &mm_caret_dollar  &mm_ampersand_at         &none
  &kp LEFT_SHIFT  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &mm_pipe_hash  &kp SEMI             &kp MINUS       &mm_slashes        &mm_parens  &mm_brackets
           &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7          &none     &none             &kp EQUAL        &mm_braces         &mm_lt_gt         &none
-                                                   &kp N0          &to 0     &to 4            &kp RETURN
+                                                   &kp N0          &to 0     &to 3            &kp RETURN
             >;
         };
 
@@ -163,24 +142,14 @@
 
         ext_layer {
             bindings = <
-   &kp C_BRI_UP        &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOL_UP  &kp K_PLAY_PAUSE   &none     &kp HOME     &kp PG_UP  &kp PG_DN    &kp END
- &sk LEFT_SHIFT  &sk LEFT_COMMAND   &sk LEFT_CONTROL  &sk LEFT_ALT         &kp LC(A)   &none     &kp LEFT      &kp DOWN     &kp UP  &kp RIGHT
-   &kp C_BRI_DN             &none              &none         &none             &none   &none  &key_repeat  &kp CAPSLOCK  &capsword      &none
-                                                             &none             &to 0   &to 5        &none
+   &kp C_BRI_UP        &kp K_MUTE  &kp K_VOLUME_DOWN              &kp K_VOL_UP  &kp K_PLAY_PAUSE   &none     &kp HOME     &kp PG_UP   &kp PG_DN    &kp END
+ &sk LEFT_SHIFT  &sk LEFT_COMMAND   &sk LEFT_CONTROL              &sk LEFT_ALT         &kp LC(A)   &none     &kp LEFT      &kp DOWN      &kp UP  &kp RIGHT
+   &kp C_BRI_DN             &none  &sk LS(LA(LCTRL))  &sk LS(LC(LA(LEFT_GUI)))             &none   &none  &key_repeat  &kp CAPSLOCK  &caps_word      &none
+                                                                         &none             &to 0   &to 4        &none
             >;
         };
 
         // Function keys with modifiers
-
-        fnc_layer {
-            bindings = <
-      &kp F1    &kp F2      &kp F3     &kp F4    &kp F5   &kp F6   &kp F7           &kp F8  &kp F9      &kp F10
-    &sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans       &trans
- &bootloader     &none       &none      &none     &none    &none    &none            &none   &none  &bootloader
-                                        &none     &to 0    &to 6    &none
-            >;
-        };
-
         // Low frequency symbols.
 
         symbols_2_layer {
@@ -188,7 +157,7 @@
  &kp IT_CARET  &kp IT_UNDER   &kp IT_PND   &kp IT_EUR  &kp IT_HASH   &none   &none   &none   &none   &none
   &kp IT_BKTK  &kp IT_TILDE  &kp IT_BSLH  &kp IT_PIPE   &kp IT_AND   &none   &none   &none   &none   &none
         &none         &none  &kp IT_SECT  &kp IT_CCED   &kp IT_DEG   &none   &none   &none   &none   &none
-                                                &none        &to 0   &none   &none
+                                                &none        &to 0   &to 5   &none
             >;
         };
 
