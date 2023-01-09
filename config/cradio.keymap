@@ -60,41 +60,40 @@
         // internal-left & external-right thumb keys
         // both left thumb keys
 
-        toggle_2 {
-            bindings = <&to 2>;
-            key-positions = <32 30>;
+        toggle_3 {
+            bindings = <&to 3>;
+            key-positions = <32 31>;
             timeout-ms = <200>;
         };
 
-        toggle_3 {
-            bindings = <&to 3>;
-            key-positions = <30 33>;
-            timeout-ms = <300>;
-        };
-
-        shift {
-            bindings = <&sk LEFT_SHIFT>;
-            key-positions = <4 5>;
+        del {
+            bindings = <&mt LEFT_ALT BACKSPACE>;
+            key-positions = <27 28>;
         };
 
         ctrl {
             bindings = <&sk LCTRL>;
-            key-positions = <14 15>;
+            key-positions = <21 22>;
         };
 
         cmd {
             bindings = <&sk LCMD>;
-            key-positions = <24 25>;
+            key-positions = <30 31>;
         };
 
         alt {
             bindings = <&sk LEFT_ALT>;
-            key-positions = <31 32>;
+            key-positions = <32 33>;
         };
 
         caps_word {
             bindings = <&caps_word>;
-            key-positions = <4 5>;
+            key-positions = <14 15>;
+        };
+
+        return {
+            bindings = <&kp RET>;
+            key-positions = <33 30>;
         };
     };
 
@@ -170,10 +169,10 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M                   &kp K   &kp Z       &kp F           &kp U  &comma_period  &gresc
-  &kp I   &kp S   &kp R      &kp T                   &kp G   &kp P       &kp N           &kp E          &kp A   &kp O
-  &kp Q   &kp V   &kp W      &kp D                   &kp J   &kp B       &kp H  &kp APOSTROPHE       &kp EXCL   &kp X
-                         &kp SPACE  &mt LEFT_ALT BACKSPACE   &to 1  &kp RETURN
+  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z           &kp F           &kp U  &comma_period  &gresc
+  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P           &kp N           &kp E          &kp A   &kp O
+  &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B           &kp H  &kp APOSTROPHE       &kp EXCL   &kp X
+                         &kp SPACE   &to 2   &to 1  &kp LEFT_SHIFT
             >;
         };
 
@@ -181,10 +180,10 @@
 
         sym_layer {
             bindings = <
-        &none         &none         &none         &none       &kp N5      &kp N6       &kp N7        &kp N8        &kp N9  &bt BT_CLR
- &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp IT_LBKT  &kp IT_EQL  &kp IT_QUES  &kp IT_SQUOT  &kp IT_MINUS       &none
- &kp IT_GREAT   &kp IT_PERC   &kp IT_RPAR   &kp IT_RBRC  &kp IT_RBKT   &kp IT_AT  &kp IT_EXCL  &kp IT_DQUOT   &kp IT_PLUS       &none
-                                                  &to 0        &none       &to 4        &none
+  &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4        &none       &none           &none         &none         &none   &none
+  &none  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp IT_LBKT  &kp IT_EQL  &kp UNDERSCORE  &kp IT_SQUOT  &kp IT_MINUS   &none
+  &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7  &kp IT_RBKT   &kp IT_AT     &kp IT_EXCL  &kp IT_DQUOT   &kp IT_PLUS   &none
+                                            &to 0        &none       &to 4           &none
             >;
         };
 
