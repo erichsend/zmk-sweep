@@ -132,7 +132,7 @@
         MOD_MORPH(asterisk-percent,ASTRK,PERCENT)
         MOD_MORPH(ampersand-at,AMPERSAND,AT)
         MOD_MORPH(pipe-hash,PIPE,HASH)
-};
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -141,10 +141,10 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z    &kp F           &kp U   &mm_comma_period  &gresc
-  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P    &kp N           &kp E              &kp A   &kp O
-  &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B    &kp H  &kp APOSTROPHE  &mm_excl_question   &kp X
-                         &kp SPACE   &sl 2   &sl 1  &kp RET
+  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z                 &kp F           &kp U   &mm_comma_period  &gresc
+  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P                 &kp N           &kp E              &kp A   &kp O
+  &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B                 &kp H  &kp APOSTROPHE  &mm_excl_question   &kp X
+                         &kp SPACE   &sl 2   &sl 1  &sk LS(LA(LC(LGUI)))
             >;
         };
 
@@ -152,10 +152,10 @@
 
         num_layer {
             bindings = <
-          &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4          &none     &none   &mm_asterisk_percent   &mm_caret_dollar  &mm_ampersand_at         &none
- &kp LEFT_SHIFT  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &mm_pipe_hash  &kp SEMI              &kp MINUS        &mm_slashes        &mm_parens  &mm_brackets
-          &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7          &none     &none              &kp EQUAL         &mm_braces         &mm_lt_gt         &none
-                                                   &kp N0          &to 0     &to 4             &kp RETURN
+          &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4          &none     &none  &mm_asterisk_percent  &mm_caret_dollar  &mm_ampersand_at         &none
+ &kp LEFT_SHIFT  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &mm_pipe_hash  &kp SEMI             &kp MINUS       &mm_slashes        &mm_parens  &mm_brackets
+          &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7          &none     &none             &kp EQUAL        &mm_braces         &mm_lt_gt         &none
+                                                   &kp N0          &to 0     &to 4            &kp RETURN
             >;
         };
 
@@ -165,7 +165,7 @@
             bindings = <
    &kp C_BRI_UP        &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOL_UP  &kp K_PLAY_PAUSE   &none     &kp HOME     &kp PG_UP  &kp PG_DN    &kp END
  &sk LEFT_SHIFT  &sk LEFT_COMMAND   &sk LEFT_CONTROL  &sk LEFT_ALT         &kp LC(A)   &none     &kp LEFT      &kp DOWN     &kp UP  &kp RIGHT
-   &kp C_BRI_DN             &none              &none         &none             &none   &none  &key_repeat  &kp CAPSLOCK  &capsword     &none
+   &kp C_BRI_DN             &none              &none         &none             &none   &none  &key_repeat  &kp CAPSLOCK  &capsword      &none
                                                              &none             &to 0   &to 5        &none
             >;
         };
