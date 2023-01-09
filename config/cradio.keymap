@@ -20,9 +20,8 @@
 #define SETTINGS 6
 
 // -----------------
-
-
 // Convenience Methods
+
 #define MOD_MORPH(NAME, KEY, MOD_KEY) \
   mm_##NAME: mm_##NAME { \
     compatible = "zmk,behavior-mod-morph"; \
@@ -111,20 +110,57 @@
                 <&kp>,
                 <&kp>;
         };
-        comma_period: comma_period { \
-          compatible = "zmk,behavior-mod-morph"; \
-          label = "COMMA_PERIOD"; \
-          #binding-cells = <0>; \
-          bindings = <&kp COMMA>, <&kp PERIOD>; \
-          mods = <(MOD_LSFT|MOD_RSFT)>; \
+        comma_period: comma_period {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_PERIOD";
+            #binding-cells = <0>;
+            bindings =
+                <&kp COMMA>,
+                <&kp PERIOD>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        MOD_MORPH(brackets, LEFT_BRACKET, RIGHT_BRACKET)
-        MOD_MORPH(braces, LEFT_BRACE, RIGHT_BRACE)
-        MOD_MORPH(lt_gt, LESS_THAN, GREATER_THAN)
-        MOD_MORPH(parens, LEFT_PARENTHESIS, RIGHT_PARENTHESIS)
-        MOD_MORPH(slashes, SLASH, BACKSLASH)
-        MOD_MORPH(minus_plus, MINUS, PLUS)
-        MOD_MORPH(comma_period, COMMA, PERIOD)
+
+        MOD_MORPH(brackets,
+
+        LEFT_BRACKET,
+
+        RIGHT_BRACKET)
+        MOD_MORPH(
+
+        braces,
+        LEFT_BRACE,
+
+        RIGHT_BRACE)
+        MOD_MORPH(
+
+        lt_gt,
+        LESS_THAN,
+
+        GREATER_THAN)
+        MOD_MORPH(
+
+        parens,
+        LEFT_PARENTHESIS,
+
+        RIGHT_PARENTHESIS)
+        MOD_MORPH(
+
+        slashes,
+        SLASH,
+
+        BACKSLASH)
+        MOD_MORPH(
+
+        minus_plus,
+
+        MINUS, PLUS)
+        MOD_MORPH(
+
+        comma_period,
+        COMMA,
+
+        PERIOD)
     };
 
     keymap {
@@ -134,9 +170,9 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M                   &kp K   &kp Z       &kp F           &kp U  &kp PERIOD  &gresc
-  &kp I   &kp S   &kp R      &kp T                   &kp G   &kp P       &kp N           &kp E       &kp A   &kp O
-  &kp Q   &kp V   &kp W      &kp D                   &kp J   &kp B       &kp H  &kp APOSTROPHE    &kp EXCL   &kp X
+  &kp Y   &kp C   &kp L      &kp M                   &kp K   &kp Z       &kp F           &kp U  &comma_period  &gresc
+  &kp I   &kp S   &kp R      &kp T                   &kp G   &kp P       &kp N           &kp E          &kp A   &kp O
+  &kp Q   &kp V   &kp W      &kp D                   &kp J   &kp B       &kp H  &kp APOSTROPHE       &kp EXCL   &kp X
                          &kp SPACE  &mt LEFT_ALT BACKSPACE   &to 1  &kp RETURN
             >;
         };
@@ -148,7 +184,7 @@
         &none         &none         &none         &none       &kp N5      &kp N6       &kp N7        &kp N8        &kp N9  &bt BT_CLR
  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp IT_LBKT  &kp IT_EQL  &kp IT_QUES  &kp IT_SQUOT  &kp IT_MINUS       &none
  &kp IT_GREAT   &kp IT_PERC   &kp IT_RPAR   &kp IT_RBRC  &kp IT_RBKT   &kp IT_AT  &kp IT_EXCL  &kp IT_DQUOT   &kp IT_PLUS       &none
-                                                  &to 0        &none       &none        &none
+                                                  &to 0        &none       &to 4        &none
             >;
         };
 
@@ -159,7 +195,7 @@
    &kp ESC     &trans      &trans     &trans     &trans     &kp PG_UP  &kp HOME    &kp UP    &kp END  &kp CAPS
   &sk LALT   &sk LGUI  &sk LSHIFT  &sk LCTRL   &kp RALT     &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL
  &kp LC(Z)  &kp LC(X)   &kp LC(C)    &kp TAB  &kp LC(V)  &kp LC(BSPC)  &kp BSPC    &trans     &trans    &trans
-                                       &to 0  &kp LCTRL         &none     &none
+                                       &to 0  &kp LCTRL         &to 5     &none
             >;
         };
 
@@ -170,7 +206,7 @@
       &kp F1    &kp F2      &kp F3     &kp F4    &kp F5   &kp F6   &kp F7           &kp F8  &kp F9      &kp F10
     &sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans       &trans
  &bootloader     &none       &none      &none     &none    &none    &none            &none   &none  &bootloader
-                                        &to 0     &none    &none    &none
+                                        &to 0     &none    &to 6    &none
             >;
         };
 
@@ -181,7 +217,7 @@
  &kp IT_CARET  &kp IT_UNDER   &kp IT_PND   &kp IT_EUR  &kp IT_HASH   &none   &none   &none   &none   &none
   &kp IT_BKTK  &kp IT_TILDE  &kp IT_BSLH  &kp IT_PIPE   &kp IT_AND   &none   &none   &none   &none   &none
         &none         &none  &kp IT_SECT  &kp IT_CCED   &kp IT_DEG   &none   &none   &none   &none   &none
-                                                &none        &none   &none   &none
+                                                &to 0        &none   &none   &none
             >;
         };
 
@@ -192,7 +228,7 @@
        &none        &none        &none  &kp IT_CEGR        &none   &none   &none   &none   &none   &none
  &kp IT_AGRV  &kp IT_IGRV  &kp IT_OGRV  &kp IT_EGRV  &kp IT_EACU   &none   &none   &none   &none   &none
        &none        &none        &none  &kp IT_UGRV        &none   &none   &none   &none   &none   &none
-                                              &none        &none   &none   &none
+                                              &to 0        &none   &none   &none
             >;
         };
 
@@ -203,7 +239,7 @@
  &bootloader   &none   &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3   &none  &unstick   &none  &bootloader
        &none   &none   &none       &none  &bt BT_SEL 1  &bt BT_SEL 4   &none     &none   &none        &none
        &none   &none   &none       &none  &bt BT_SEL 2  &bt BT_SEL 5   &none     &none   &none        &none
-                                   &none         &none         &none   &none
+                                   &to 0         &none         &none   &none
             >;
         };
     };
