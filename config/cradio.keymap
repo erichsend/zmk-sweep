@@ -128,10 +128,10 @@
         MOD_MORPH(slashes,SLASH,BACKSLASH)
         MOD_MORPH(comma_period,COMMA,PERIOD)
         MOD_MORPH(excl_question,EXCL,QUESTION)
-        MOD_MORPH(caret-dollar,CARET,DOLLAR)
-        MOD_MORPH(asterisk-percent,ASTRK,PERCENT)
-        MOD_MORPH(ampersand-at,AMPERSAND,AT)
-        MOD_MORPH(pipe-hash,PIPE,HASH)
+        MOD_MORPH(caret_dollar,CARET,DOLLAR)
+        MOD_MORPH(asterisk_percent,ASTRK,PERCENT)
+        MOD_MORPH(ampersand_at,AMPERSAND,AT)
+        MOD_MORPH(pipe_hash,PIPE,HASH)
     };
 
     keymap {
