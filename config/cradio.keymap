@@ -12,7 +12,7 @@
 // Layer definitions
 
 #define BASE 0
-#define SYM 1
+#define NUM 1
 #define EXT 2
 #define FNC 3
 #define SYM2 4
@@ -167,6 +167,13 @@
         COMMA,
 
         PERIOD)
+
+        MOD_MORPH(
+
+        equals_pipe,
+        EQUALS,
+
+        PIPE)
     };
 
     keymap {
@@ -176,7 +183,7 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z           &kp F           &kp U      &comma_period  &gresc
+  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z           &kp F           &kp U   &mm_comma_period  &gresc
   &kp I   &kp S   &kp R      &kp T   &kp G   &kp P           &kp N           &kp E              &kp A   &kp O
   &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B           &kp H  &kp APOSTROPHE  &mm_excl_question   &kp X
                          &kp SPACE   &to 2   &to 1  &kp LEFT_SHIFT
@@ -185,12 +192,12 @@
 
         // Numbers and high frequency symbols
 
-        sym_layer {
+        num_layer {
             bindings = <
-  &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4        &none       &none           &none         &none         &none   &none
-  &none  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1  &kp IT_LBKT  &kp IT_EQL  &kp UNDERSCORE  &kp IT_SQUOT  &kp IT_MINUS   &none
-  &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7  &kp IT_RBKT   &kp IT_AT     &kp IT_EXCL  &kp IT_DQUOT   &kp IT_PLUS   &none
-                                            &none        &to 0       &to 4           &none
+  &none  &kp NUMBER_6  &kp NUMBER_5  &kp NUMBER_4        &none       &none              &none   &none  &none  &none
+  &none  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1        &none       &none     &kp UNDERSCORE   &none  &none  &none
+  &none  &kp NUMBER_9        &kp N8  &kp NUMBER_7        &none       &none              &none   &none  &none  &none
+                                            &none        &to 0       &to 4              &none
             >;
         };
 
