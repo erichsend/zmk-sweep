@@ -120,6 +120,12 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        MOD_MORPH(excl_question,
+
+        EXCL,
+
+        QUESTION)
+
         MOD_MORPH(brackets,
 
         LEFT_BRACKET,
@@ -169,9 +175,9 @@
 
         default_layer {
             bindings = <
-  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z           &kp F           &kp U  &comma_period  &gresc
-  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P           &kp N           &kp E          &kp A   &kp O
-  &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B           &kp H  &kp APOSTROPHE       &kp EXCL   &kp X
+  &kp Y   &kp C   &kp L      &kp M   &kp K   &kp Z           &kp F           &kp U  &comma_period    &gresc
+  &kp I   &kp S   &kp R      &kp T   &kp G   &kp P           &kp N           &kp E          &kp A    &kp O
+  &kp Q   &kp V   &kp W      &kp D   &kp J   &kp B           &kp H  &kp APOSTROPHE  &excl_question   &kp X
                          &kp SPACE   &to 2   &to 1  &kp LEFT_SHIFT
             >;
         };
