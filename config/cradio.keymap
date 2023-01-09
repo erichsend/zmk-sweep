@@ -115,26 +115,18 @@
                 <&kp>,
                 <&kp>;
         };
-        comma_period: comma_period {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_PERIOD";
-            #binding-cells = <0>;
-            bindings =
-                <&kp COMMA>,
-                <&kp PERIOD>;
 
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        MOD_MORPH(excl_question,EXCL,QUESTION)
         MOD_MORPH(brackets,LEFT_BRACKET,RIGHT_BRACKET)
         MOD_MORPH(braces,LEFT_BRACE,RIGHT_BRACE)
         MOD_MORPH(lt_gt,LESS_THAN,GREATER_THAN)
         MOD_MORPH(parens,LEFT_PARENTHESIS,RIGHT_PARENTHESIS)
         MOD_MORPH(slashes,SLASH,BACKSLASH)
-        MOD_MORPH(minus_plus,MINUS,PLUS)
         MOD_MORPH(comma_period,COMMA,PERIOD)
-        MOD_MORPH(equals_pipe,EQUAL,PIPE)
+        MOD_MORPH(excl_question,EXCL,QUESTION)
+        MOD_MORPH(caret-dollar,CARET,DOLLAR)
+        MOD_MORPH(asterisk-percent,ASTRK,PERCENT)
+        MOD_MORPH(ampersand-at,AMPERSAND,AT)
+        MOD_MORPH(pipe-hash,PIPE,HASH)
 };
 
     keymap {
